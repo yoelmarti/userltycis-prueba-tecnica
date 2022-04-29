@@ -1,0 +1,8 @@
+<app-search (search)="handleSearch($event)"></app-search>
+<div class="pokemons">
+    <div class="pokemons__card" *ngFor="let pokemon of pokemonList | paginate: {itemsPerPage: 20, currentPage: page, totalItems: totalPokemons} | search: filterValue">
+        <img src="{{pokemon.sprites.front_default}}" alt="{{pokemon.name}}">
+        <p>{{pokemon.name}}</p>
+    </div>
+</div>
+<pagination-controls (pageChange)="page = $event; pokemonList = []; getPokemons()"></pagination-controls>

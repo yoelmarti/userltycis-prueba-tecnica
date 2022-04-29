@@ -1,0 +1,22 @@
+.pokemons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 150px;
+        border-radius: 25px;
+        border: solid 1px black;
+        height: 250px;
+        margin: 10px;
+    }
+    
+}
+
+pagination-controls{
+    text-align: center;
+}
